@@ -1,3 +1,91 @@
 // Place all the styles related to the landing controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container {
+  @media (min-width: 320px) {
+    width: 265px;
+  }
+  @media (min-width: 480px) {
+    width: 265px;
+  }
+  @media (min-width: 600px) {
+    width: 503px;
+  }
+  @media (min-width: 800px) {
+    width: 746px;
+  }
+  @media (min-width: 1024px) {
+    width: 986px;
+  }
+  @media (min-width: 1280px) {
+    width: 1226px;
+  }
+  @media (min-width: 1520px) {
+    width: 1466px;
+  }
+}
+
+// Carousel
+.carousel {
+  position: relative;
+
+  .carousel-box {
+    width: 100%;
+    overflow: hidden;
+  }
+  .arrow {
+    position: absolute;
+    top: 25%;
+    font-size: 80px;
+    color: #000;
+    opacity: 0.7;
+    -webkit-transform: scaleX(0.3);
+    transform: scaleX(0.3);
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &.prev {
+      left: -60px;
+    }
+    &.next {
+      right: -60px;
+    }
+  }
+}
+.row {
+  &.carousel-inner-box {
+    position: relative;
+    left: 0;
+    @include transition(all 0.8s ease-in-out);
+  }
+
+  .thumb-big {
+    display: none;
+    width: 476px;
+    height: 268px;
+    float: left;
+    @media (min-width: 600px) {
+      display: block;
+    }
+  }
+  &.thumb-small {
+    height: 124px;
+    margin: 0 0 20px 0;
+    overflow: hidden;
+
+    .image-frame {
+      width: 220px;
+      height: 124px;
+      margin: 0 0 0 20px;
+      float: left;
+    }
+  }
+}
+// END .Carousel
+h1 {
+  color: #80B94B;
+}
