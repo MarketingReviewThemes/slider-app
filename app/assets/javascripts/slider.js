@@ -47,6 +47,9 @@ function Carousel(option) {
   // Change Container(Carousel) width on window resize
   $(window).on("resize", function() {
     containerWidth = $(".container").width() + 8;
+    newLeft = 0;
+    carouselInnerBox.css("left", newLeft + "px");
+    toggleButton();
   });
 
 }
